@@ -1,5 +1,5 @@
-function greetMe(nome) {
-	alert("Olá, " + nome);
+function greet(string) {
+	return "Hello, " + string;
 }
 
-greetMe("mundo");
+module.exports = greet;
