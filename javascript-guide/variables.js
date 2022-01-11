@@ -13,3 +13,15 @@ module.exports.strToInt = function strToInt(string, base) {
 module.exports.strToFloat = function strToFloat(string) {
 	return parseFloat(string);
 };
+
+module.exports.scopeError = function scopeError() {
+	if (true) {
+		let y = 5;
+	}
+	try {
+		throw "Scope error";
+	}
+	catch (e) {
+		return e;
+	}
+};

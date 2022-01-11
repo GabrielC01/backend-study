@@ -12,3 +12,7 @@ test('Convert string to decimal integer', () => {
 test('Convert string to decimal float', () => {
 	expect(variables.strToFloat('10', 10)).toBe(10);
 });
+
+test('Variable scope test', () => {
+	expect(variables.scopeError()).toBe("Scope error");
+});
