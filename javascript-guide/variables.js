@@ -14,4 +14,4 @@ function strToFloat(string) {
 	return parseFloat(string);
 }
 
-module.exports = [ addTwoNumbers, strToInt, strToFloat ];
+module.exports = addTwoNumbers;
