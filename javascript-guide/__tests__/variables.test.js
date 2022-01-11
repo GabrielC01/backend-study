@@ -1,11 +1,14 @@
-import addTwoNumbers from '../variables';
+const variables = require('../variables');
 
-jest.mock(addTwoNumbers);
 
 test('Add two numbers', () => {
-	expect(variables(2, 2)).toBe(4);
+	expect(variables.addTwoNumbers(2, 2)).toBe(4);
 });
 
-// test('Convert string to decimal integer', () => {
-// 	expect(strToInt('10', 10)).toBe(10);
-// });
+test('Convert string to decimal integer', () => {
+	expect(variables.strToInt('10', 10)).toBe(10);
+});
+
+test('Convert string to decimal float', () => {
+	expect(variables.strToFloat('10', 10)).toBe(10);
+});

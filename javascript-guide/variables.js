@@ -2,16 +2,14 @@
 /* Multiline
  * comment */
 
-function addTwoNumbers(x, y) {
+module.exports.addTwoNumbers = function addTwoNumbers(x, y) {
 	return x + y;
-}
+};
 
-function strToInt(string, base) {
+module.exports.strToInt = function strToInt(string, base) {
 	return parseInt(string, base);
-}
+};
 
-function strToFloat(string) {
+module.exports.strToFloat = function strToFloat(string) {
 	return parseFloat(string);
-}
-
-module.exports = addTwoNumbers;
+};
