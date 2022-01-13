@@ -117,6 +117,27 @@ describe("Number Object", () => {
 				expect(Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1)).toBe(false);
 			});
 		});
+
+		describe("parseFloat()", () => {
+			test("arg: '10.2'", () => {
+				expect(Number.parseFloat('10.2')).toBe(10.2);
+			});
+
+			test("arg: '1'", () => {
+				expect(Number.parseFloat('1')).toBe(1.0);
+			});
+		});
+
+		describe("parseInt()", () => {
+			test("arg: '1'", () => {
+				expect(Number.parseInt('1')).toBe(1);
+			});
+
+			test("arg: '10.2'", () => {
+				expect(Number.parseInt('10.2')).toBe(10);
+			});
+		});
+
 //		describe("", () => {
 //		});
 	});
