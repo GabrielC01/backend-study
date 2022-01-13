@@ -91,6 +91,11 @@ describe("Number Object", () => {
 			});
 		});
 
+		describe("isInteger()", () => {
+			test("arg: 0", () => {
+				expect(number.isIntegerMethod(0)).toBe(true);
+			});
+		});
 //		describe("", () => {
 //		});
 	});

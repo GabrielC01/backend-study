@@ -1,50 +1,69 @@
 // Properties
-module.exports.returnEpsilon = () => {
+function returnEpsilon() {
 	return Number.EPSILON;
 };
 
-module.exports.epsilonComparison = () => {
+function epsilonComparison() {
 	var result = Math.abs(0.2 - 0.3 + 0.1);
 	return result < Number.EPSILON;
 };
 
-module.exports.returnMaxSafeInt = () => {
+function returnMaxSafeInt() {
 	var y = Number.MAX_SAFE_INTEGER;
 	return y;
 };
 
-module.exports.isSafe = (n) => {
+function isSafe (n) {
 	var y = Number.MAX_SAFE_INTEGER + n;
 	return Number.isSafeInteger(y);
 };
 
-module.exports.returnMaxValue = (n) => {
+function returnMaxValue (n) {
 	if (n > 0 && Number.MAX_VALUE + n === Number.MAX_VALUE)
 		return "Process as Infinity";
 	else
 		return Number.MAX_VALUE + n;
 };
 
-module.exports.returnMinSafeInt = () => {
+function returnMinSafeInt() {
 	return Number.MIN_SAFE_INTEGER;
 };
 
-module.exports.returnMinValue = () => {
+function returnMinValue() {
 	return Number.MIN_VALUE;
 };
 
-module.exports.returnNaN = () => {
+function returnNaN() {
 	return Number.NaN;
 };
 
-module.exports.returnNegativeInfinity = () => {
+function returnNegativeInfinity() {
 	return Number.NEGATIVE_INFINITY;
 };
 
-module.exports.returnPositiveInfinity = () => {
+function returnPositiveInfinity() {
 	return Number.POSITIVE_INFINITY;
 };
 
-module.exports.isFiniteMethod = (arg) => {
+function isFiniteMethod (arg) {
 	return Number.isFinite(arg);
+};
+
+function isIntegerMethod (arg) {
+	return Number.isInteger(arg);
+};
+
+module.exports = {
+	returnEpsilon,
+	epsilonComparison,
+	returnMaxSafeInt,
+	isSafe,
+	returnMaxValue,
+	returnMinSafeInt,
+	returnMinValue,
+	returnNaN,
+	returnNegativeInfinity,
+	returnPositiveInfinity,
+	isFiniteMethod,
+	isIntegerMethod
 };
