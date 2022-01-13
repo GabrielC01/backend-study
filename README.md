@@ -1,6 +1,6 @@
-# JavaScript Practise Repository
+# JavaScript Study Repository
 
-This repository should store my JavaScript back-end study content.
+This repository should store my JavaScript study content.
 It should contain my experiments with JavaScript documentation,
 and these experiments should be tested with the Jest framework.
 It should also contain exercises, that should also be tested
