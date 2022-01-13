@@ -95,6 +95,18 @@ describe("Number Object", () => {
 			test("arg: 0", () => {
 				expect(number.isIntegerMethod(0)).toBe(true);
 			});
+
+			test("arg: 1", () => {
+				expect(number.isIntegerMethod(1)).toBe(true);
+			});
+
+			test("arg: -100000", () => {
+				expect(number.isIntegerMethod(-100000)).toBe(true);
+			});
+
+			test("arg: Infinity", () => {
+				expect(number.isIntegerMethod(Infinity)).toBe(false);
+			});
 		});
 //		describe("", () => {
 //		});
