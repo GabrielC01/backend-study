@@ -13,16 +13,16 @@ module.exports.returnMaxSafeInt = () => {
 	return y;
 };
 
-module.exports.isSafe = (x) => {
-	var y = Number.MAX_SAFE_INTEGER + x;
+module.exports.isSafe = (n) => {
+	var y = Number.MAX_SAFE_INTEGER + n;
 	return Number.isSafeInteger(y);
 };
 
-module.exports.returnMaxValue = (x) => {
-	if (x > 0 && Number.MAX_VALUE + x === Number.MAX_VALUE)
+module.exports.returnMaxValue = (n) => {
+	if (n > 0 && Number.MAX_VALUE + n === Number.MAX_VALUE)
 		return "Process as Infinity";
 	else
-		return Number.MAX_VALUE + x;
+		return Number.MAX_VALUE + n;
 };
 
 module.exports.returnMinSafeInt = () => {
@@ -43,4 +43,8 @@ module.exports.returnNegativeInfinity = () => {
 
 module.exports.returnPositiveInfinity = () => {
 	return Number.POSITIVE_INFINITY;
+};
+
+module.exports.isFiniteMethod = (arg) => {
+	return Number.isFinite(arg);
 };

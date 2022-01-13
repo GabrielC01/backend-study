@@ -66,8 +66,32 @@ describe("Number Object", () => {
 				expect(number.returnPositiveInfinity()).toBe(Infinity);
 			});
 		});
+	});
 
-		describe("", () => {
+	describe("Number Methods", () => {
+		describe("isFinite()", () => {
+			test("arg: Infinity", () => {
+				expect(number.isFiniteMethod(Infinity)).toBe(false);
+			});
+
+			test("arg: NaN", () => {
+				expect(number.isFiniteMethod(NaN)).toBe(false);
+			});
+
+			test("arg: -Infinity", () => {
+				expect(number.isFiniteMethod(-Infinity)).toBe(false);
+			});
+
+			test("arg: 0", () => {
+				expect(number.isFiniteMethod(0)).toBe(true);
+			});
+
+			test("arg: 2e64", () => {
+				expect(number.isFiniteMethod(2e64)).toBe(true);
+			});
 		});
+
+//		describe("", () => {
+//		});
 	});
 });
