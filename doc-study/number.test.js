@@ -181,14 +181,26 @@ describe("Number Object", () => {
 			/* This method sets the number of significant figure
 			 * according to the passed parameter. */
 			let n = 123.45678;
-			test("arg: 4", () => {
+			test("n = 123.45678; arg: 4", () => {
 				expect(n.toPrecision(4)).toBe("123.5");
 			});
-			test("arg: 2", () => {
+			test("n = 123.45678; arg: 2", () => {
 				expect(n.toPrecision(2)).toBe("1.2e+2");
 			});
-			test("arg: 7", () => {
+			test("n = 123.45678; arg: 7", () => {
 				expect(n.toPrecision(7)).toBe("123.4568");
+			});
+		});
+
+		describe("prototype.toString()", () => {
+			/* This method converts a number into a string.
+			 * It may receive the base number. */
+			let n = 7;
+			test("n = 7; arg: undefined", () => {
+				expect(n.toString()).toBe("7");
+			});
+			test("n = 7; arg: 2", () => {
+				expect(n.toString(2)).toBe("111");
 			});
 		});
 
