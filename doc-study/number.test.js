@@ -130,21 +130,21 @@ describe("Number Object", () => {
 			 * notation, and, optionally, specifies the
 			 * number of digits after the decimal point.
 			 * It returns a string. */
-			test("arg: 10", () => {
+			test("n = 10", () => {
 				let n = 10;
 				expect(n.toExponential()).toBe("1e+1");
 			});
-			test("arg: 3", () => {
+			test("n = 3", () => {
 				let n = 3;
 				expect(n.toExponential()).toBe("3e+0");
 			});
-			test("arg: 77", () => {
+			test("n = 77", () => {
 				let n = 77;
 				expect(n.toExponential()).toBe("7.7e+1");
 			});
 		});
 
-		describe("prototype.toFixed()", () => {
+		describe("prototype.toFixed(), n = 10.3080", () => {
 			/* It formats a number, removing the digits
 			 * after its decimal point, or, optionally,
 			 * specifying the number of them.
@@ -161,7 +161,7 @@ describe("Number Object", () => {
 			});
 		});
 
-		describe("prototype.toLocaleString()", () => {
+		describe("prototype.toLocaleString(), n = 123456.789", () => {
 			/* It formats the number object according to the
 			 * passed parameters, that may include locales and
 			 * other settings, though it may be empty. */
@@ -177,34 +177,52 @@ describe("Number Object", () => {
 			});
 		});
 
-		describe("prototype.toPrecision()", () => {
+		describe("prototype.toPrecision(), n = 123.45678", () => {
 			/* This method sets the number of significant figure
 			 * according to the passed parameter. */
 			let n = 123.45678;
-			test("n = 123.45678; arg: 4", () => {
+			test("arg: 4", () => {
 				expect(n.toPrecision(4)).toBe("123.5");
 			});
-			test("n = 123.45678; arg: 2", () => {
+			test("arg: 2", () => {
 				expect(n.toPrecision(2)).toBe("1.2e+2");
 			});
-			test("n = 123.45678; arg: 7", () => {
+			test("arg: 7", () => {
 				expect(n.toPrecision(7)).toBe("123.4568");
 			});
 		});
 
-		describe("prototype.toString()", () => {
+		describe("prototype.toString(), n = 7", () => {
 			/* This method converts a number into a string.
 			 * It may receive the base number. */
 			let n = 7;
-			test("n = 7; arg: undefined", () => {
+			test("arg: undefined", () => {
 				expect(n.toString()).toBe("7");
 			});
-			test("n = 7; arg: 2", () => {
+			test("arg: 2", () => {
 				expect(n.toString(2)).toBe("111");
 			});
 		});
 
-//		describe("", () => {
-//		});
+		describe("prototype.valueOf()", () => {
+			/* This method returns the primitive value of a number
+			 * object.*/
+			test("n = 10", () => {
+				let n = 10;
+				expect(n.valueOf()).toBe(10);
+			});
+			test("n = 0b101", () => {
+				let n = 0b101;
+				expect(n.valueOf()).toBe(5);
+			});
+			test("n = 0o120", () => {
+				let n = 0o120;
+				expect(n.valueOf()).toBe(80);
+			});
+			test("n = 0xffffff", () => {
+				let n = 0xffffff;
+				expect(n.valueOf()).toBe(16777215);
+			});
+		});
 	});
 });
