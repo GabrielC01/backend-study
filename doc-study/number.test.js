@@ -161,6 +161,19 @@ describe("Number Object", () => {
 			});
 		});
 
+		describe("prototype.toLocaleString()", () => {
+			let n = 123456.789;
+			test("arg: pt-BR", () => {
+				expect(n.toLocaleString("pt-BR")).toBe("123.456,789");
+			});
+			test("arg: he_IL", () => {
+				expect(n.toLocaleString("he-IL")).toBe("123,456.789");
+			});
+			test("arg: el_GR", () => {
+				expect(n.toLocaleString("el-GR")).toBe("123.456,789");
+			});
+		});
+
 //		describe("", () => {
 //		});
 	});
