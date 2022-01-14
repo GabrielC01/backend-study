@@ -162,6 +162,9 @@ describe("Number Object", () => {
 		});
 
 		describe("prototype.toLocaleString()", () => {
+			/* It formats the number object according to the
+			 * passed parameters, that may include locales and
+			 * other settings, though it may be empty. */
 			let n = 123456.789;
 			test("arg: pt-BR", () => {
 				expect(n.toLocaleString("pt-BR")).toBe("123.456,789");
@@ -171,6 +174,21 @@ describe("Number Object", () => {
 			});
 			test("arg: el_GR", () => {
 				expect(n.toLocaleString("el-GR")).toBe("123.456,789");
+			});
+		});
+
+		describe("prototype.toPrecision()", () => {
+			/* This method sets the number of significant figure
+			 * according to the passed parameter. */
+			let n = 123.45678;
+			test("arg: 4", () => {
+				expect(n.toPrecision(4)).toBe("123.5");
+			});
+			test("arg: 2", () => {
+				expect(n.toPrecision(2)).toBe("1.2e+2");
+			});
+			test("arg: 7", () => {
+				expect(n.toPrecision(7)).toBe("123.4568");
 			});
 		});
 
