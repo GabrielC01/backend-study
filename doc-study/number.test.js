@@ -138,6 +138,23 @@ describe("Number Object", () => {
 			});
 		});
 
+		describe("prototype.toExponential()", () => {
+			test("arg: 10", () => {
+				let numObj = 10;
+				expect(numObj.toExponential()).toBe("1e+1");
+			});
+
+			test("arg: 3", () => {
+				let numObj = 3;
+				expect(numObj.toExponential()).toBe("3e+0");
+			});
+
+			test("arg: 77", () => {
+				let numObj = 77;
+				expect(numObj.toExponential()).toBe("7.7e+1");
+			});
+		});
+
 //		describe("", () => {
 //		});
 	});
