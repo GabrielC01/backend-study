@@ -1,6 +1,0 @@
-{
-  "devDependencies": {},
-  "scripts": {
-    "test": "jest"
-  }
-}
