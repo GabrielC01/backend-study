@@ -35,6 +35,25 @@ describe("Math Object", () => {
 				expect(Math.LOG2E).toBe(1.4426950408889634);
 			});
 		});
+
+		// π constant
+		describe("PI", () => {
+			test("Check PI", () => {
+				expect(Math.PI).toBe(3.141592653589793);
+			});
+			test("Calculate the area of a circle (radius = 7)", () => {
+				let circleArea = Math.PI * 7**2;
+				expect(circleArea).toBe(153.93804002589985);
+			});
+		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
 //		describe("", () => {
 //		});
 	});
