@@ -53,8 +53,13 @@ describe("Math Object", () => {
 				expect(Math.SQRT1_2).toBe(0.7071067811865476);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Square root of 2
+		describe("SQRT2", () => {
+			test("Check SQRT2", () => {
+				expect(Math.SQRT2).toBe(1.4142135623730951);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
