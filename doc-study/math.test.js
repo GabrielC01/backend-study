@@ -28,8 +28,13 @@ describe("Math Object", () => {
 				expect(Math.LOG10E).toBe(0.4342944819032518);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Base 2 logarithm of e (≈1.442)
+		describe("LOG2E", () => {
+			test("Check LOG2E", () => {
+				expect(Math.LOG2E).toBe(1.4426950408889634);
+			});
+		});
 //		describe("", () => {
 //		});
 	});
