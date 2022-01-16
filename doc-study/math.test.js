@@ -46,8 +46,13 @@ describe("Math Object", () => {
 				expect(circleArea).toBe(153.93804002589985);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Square root of 1/2
+		describe("SQRT1_2", () => {
+			test("Check SQRT1_2", () => {
+				expect(Math.SQRT1_2).toBe(0.7071067811865476);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
