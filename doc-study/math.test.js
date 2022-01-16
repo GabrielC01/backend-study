@@ -8,8 +8,12 @@ describe("Math Object", () => {
 			});
 		});
 
-//		describe("", () => {
-//		});
+		// Natural log(10) (≈ 2.302)
+		describe("LN10", () => {
+			test("Check LN10", () => {
+				expect(Math.LN10).toBe(2.302585092994046);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
