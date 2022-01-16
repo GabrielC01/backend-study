@@ -16,13 +16,18 @@ describe("Math Object", () => {
 		});
 
 		// Natural log(2) (≈0.693)
-		describe("Check LN2", () => {
+		describe("LN2", () => {
 			test("Check LN2", () => {
 				expect(Math.LN2).toBe(0.6931471805599453);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Base 10 logarithm of e (≈0.434)
+		describe("LOG10E", () => {
+			test("Check LOG10E", () => {
+				expect(Math.LOG10E).toBe(0.4342944819032518);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
