@@ -60,8 +60,17 @@ describe("Math Object", () => {
 				expect(Math.SQRT2).toBe(1.4142135623730951);
 			});
 		});
-//		describe("", () => {
-//		});
+
+	});
+
+	// Methods
+	describe("Methods", () => {
+		// Absolute value of a number
+		describe("abs()", () => {
+			test("arg: -3", () => {
+				expect(Math.abs(-3)).toBe(3);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
