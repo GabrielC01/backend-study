@@ -72,6 +72,7 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Arc cosine
 		describe("acos()", () => {
 			test("arg: -2", () => {
 				expect(Math.acos(-2)).toBe(NaN);
@@ -89,8 +90,22 @@ describe("Math Object", () => {
 				expect(Math.acos(2)).toBe(NaN);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Hiperbolic arc cosine
+		describe("acosh()", () => {
+			test("arg: -1", () => {
+				expect(Math.acosh(-1)).toBe(NaN);
+			});
+			test("arg: 0", () => {
+				expect(Math.acosh(0)).toBe(NaN);
+			});
+			test("arg: 1", () => {
+				expect(Math.acosh(1)).toBe(0);
+			});
+			test("arg: 2", () => {
+				expect(Math.acosh(2)).toBe(1.3169578969248166);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
