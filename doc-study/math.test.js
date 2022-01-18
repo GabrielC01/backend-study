@@ -125,6 +125,25 @@ describe("Math Object", () => {
 				expect(Math.asin(2)).toBe(NaN);
 			});
 		});
+
+
+		// Hiperbolic arc sine
+		describe("asinh()", () => {
+			test("arg: 1", () => {
+				expect(Math.asinh(1)).toBe(0.881373587019543);
+			});
+			test("arg: 0", () => {
+				expect(Math.asinh(0)).toBe(0);
+			});
+			test("arg: -1", () => {
+				expect(Math.asinh(-1)).toBe(-0.881373587019543);
+			});
+			test("arg: 2", () => {
+				expect(Math.asinh(2)).toBe(1.4436354751788103);
+			});
+		});
+//		describe("", () => {
+//		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
