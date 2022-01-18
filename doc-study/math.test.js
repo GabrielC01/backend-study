@@ -71,6 +71,30 @@ describe("Math Object", () => {
 				expect(Math.abs(-3)).toBe(3);
 			});
 		});
+
+		describe("acos()", () => {
+			test("arg: -2", () => {
+				expect(Math.acos(-2)).toBe(NaN);
+			});
+			test("arg: -1", () => {
+				expect(Math.acos(-1)).toBe(3.141592653589793);
+			});
+			test("arg: 0", () => {
+				expect(Math.acos(-0)).toBe(1.5707963267948966);
+			});
+			test("arg: 1", () => {
+				expect(Math.acos(1)).toBe(0);
+			});
+			test("arg: 2", () => {
+				expect(Math.acos(2)).toBe(NaN);
+			});
+		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
