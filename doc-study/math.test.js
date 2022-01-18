@@ -106,8 +106,25 @@ describe("Math Object", () => {
 				expect(Math.acosh(2)).toBe(1.3169578969248166);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Arc sine
+		describe("asin()", () => {
+			test("arg: -2", () => {
+				expect(Math.asin(-2)).toBe(NaN);
+			});
+			test("arg: -1", () => {
+				expect(Math.asin(-1)).toBe(- Math.PI / 2);
+			});
+			test("arg: 0", () => {
+				expect(Math.asin(0)).toBe(0);
+			});
+			test("arg: 1", () => {
+				expect(Math.asin(1)).toBe(Math.PI / 2);
+			});
+			test("arg: 2", () => {
+				expect(Math.asin(2)).toBe(NaN);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
