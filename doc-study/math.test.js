@@ -206,8 +206,19 @@ describe("Math Object", () => {
 				expect(Math.fround(5)).toBe(5);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the square root of the sum of the squares of the arguments
+		describe("hypot()", () => {
+			test("arg: 3, 4", () => {
+				expect(Math.hypot(3, 4)).toBe(5);
+			});
+			test("arg: 9, 12", () => {
+				expect(Math.hypot(9, 12)).toBe(15);
+			});
+			test("arg: -5", () => {
+				expect(Math.hypot(5)).toBe(5);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
