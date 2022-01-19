@@ -167,8 +167,19 @@ describe("Math Object", () => {
 				expect(Math.atan(5 / 3)).toBe(1.0303768265243125);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the angle of a point
+		describe("atan2()", () => {
+			test("arg: 90,15", () => {
+				expect(Math.atan2(90, 15)).toBe(1.4056476493802699);
+			});
+			test("arg: 15, 90", () => {
+				expect(Math.atan2(15, 90)).toBe(0.16514867741462683);
+			});
+			test("arg: 10, 10", () => {
+				expect(Math.atan2(10, 10)).toBe(0.7853981633974483);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
