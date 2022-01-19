@@ -193,6 +193,27 @@ describe("Math Object", () => {
 				expect(Math.floor(3.4)).toBe(3);
 			});
 		});
+
+		// Returns the nearest 32-bit single precision float representation of a Number
+		describe("fround()", () => {
+			test("arg: 5.5", () => {
+				expect(Math.fround(5.5)).toBe(5.5);
+			});
+			test("arg: 5.05", () => {
+				expect(Math.fround(5.05)).toBe(5.050000190734863);
+			});
+			test("arg: 5", () => {
+				expect(Math.fround(5)).toBe(5);
+			});
+		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
 //		describe("", () => {
 //		});
 	});
