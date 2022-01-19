@@ -72,7 +72,7 @@ describe("Math Object", () => {
 			});
 		});
 
-		// Arc cosine
+		// Arccosine (in radians)
 		describe("acos()", () => {
 			test("arg: -2", () => {
 				expect(Math.acos(-2)).toBe(NaN);
@@ -91,7 +91,7 @@ describe("Math Object", () => {
 			});
 		});
 
-		// Hiperbolic arc cosine
+		// Hiperbolic arccosine
 		describe("acosh()", () => {
 			test("arg: -1", () => {
 				expect(Math.acosh(-1)).toBe(NaN);
@@ -107,7 +107,7 @@ describe("Math Object", () => {
 			});
 		});
 
-		// Arc sine
+		// Arcsine (in radians)
 		describe("asin()", () => {
 			test("arg: -2", () => {
 				expect(Math.asin(-2)).toBe(NaN);
@@ -127,7 +127,7 @@ describe("Math Object", () => {
 		});
 
 
-		// Hiperbolic arc sine
+		// Hiperbolic arcsine
 		describe("asinh()", () => {
 			test("arg: 1", () => {
 				expect(Math.asinh(1)).toBe(0.881373587019543);
@@ -142,8 +142,31 @@ describe("Math Object", () => {
 				expect(Math.asinh(2)).toBe(1.4436354751788103);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Arctangent (radians)
+		describe("atan()", () => {
+			test("arg: 1", () => {
+				expect(Math.atan(1)).toBe(0.7853981633974483);
+			});
+			test("arg: 0", () => {
+				expect(Math.atan(0)).toBe(0);
+			});
+			test("arg: -0", () => {
+				expect(Math.atan(-0)).toBe(-0);
+			});
+			test("arg: Infinity", () => {
+				expect(Math.atan(Infinity)).toBe(1.5707963267948966);
+			});
+			test("arg: Infinity", () => {
+				expect(Math.atan(-Infinity)).toBe(-1.5707963267948966);
+			});
+			test("arg: 8 / 10", () => {
+				expect(Math.atan(8 / 10)).toBe(0.6747409422235527);
+			});
+			test("arg: 5 / 3", () => {
+				expect(Math.atan(5 / 3)).toBe(1.0303768265243125);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
