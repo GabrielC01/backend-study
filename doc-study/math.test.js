@@ -180,8 +180,19 @@ describe("Math Object", () => {
 				expect(Math.atan2(10, 10)).toBe(0.7853981633974483);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Floor of a floating number
+		describe("floor()", () => {
+			test("arg: 1.2", () => {
+				expect(Math.floor(1.2)).toBe(1);
+			});
+			test("arg: 2.3", () => {
+				expect(Math.floor(2.3)).toBe(2);
+			});
+			test("arg: 3.4", () => {
+				expect(Math.floor(3.4)).toBe(3);
+			});
+		});
 //		describe("", () => {
 //		});
 	});
