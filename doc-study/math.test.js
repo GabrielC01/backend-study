@@ -275,6 +275,22 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Returns the cosine of the given number (in radians)
+		describe("cos(n)", () => {
+			test("arg: 0", () => {
+				expect(Math.cos(0)).toBe(1);
+			});
+			test("arg: 1", () => {
+				expect(Math.cos(1)).toBe(0.5403023058681398);
+			});
+			test("arg: Math.PI", () => {
+				expect(Math.cos(Math.PI)).toBe(-1);
+			});
+			test("arg: 2 * Math.PI", () => {
+				expect(Math.cos(2 * Math.PI)).toBe(1);
+			});
+		});
+
 		// Returns the result of e constant raised to the power of the given number
 		describe("exp(n)", () => {
 			test("arg: -1", () => {
