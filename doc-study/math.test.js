@@ -451,6 +451,25 @@ describe("Math Object", () => {
 				expect(Math.log2(128)).toBe(7);
 			});
 		});
+
+		// Returns the largest of the given numbers
+		describe("max(...)", () => {
+			test("arg: [1, 2, 3]", () => {
+				expect(Math.max(...[1, 2, 3])).toBe(3);
+			});
+			test("arg: 5, 15, 30", () => {
+				expect(Math.max(5, 15, 30)).toBe(30);
+			});
+			test("arg: 40, 70, 20", () => {
+				expect(Math.max(40, 70, 20)).toBe(70);
+			});
+			test("arg: [1, 3, 7, 8]", () => {
+				let array = [1, 3, 7, 8];
+				expect(Math.max(...array)).toBe(8);
+			});
+		});
+//		describe("", () => {
+//		});
 //		describe("", () => {
 //		});
 	});
