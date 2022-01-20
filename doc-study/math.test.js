@@ -66,14 +66,14 @@ describe("Math Object", () => {
 	// Methods
 	describe("Methods", () => {
 		// Absolute value of a number
-		describe("abs()", () => {
+		describe("abs(n)", () => {
 			test("arg: -3", () => {
 				expect(Math.abs(-3)).toBe(3);
 			});
 		});
 
 		// Arccosine (in radians)
-		describe("acos()", () => {
+		describe("acos(n)", () => {
 			test("arg: -2", () => {
 				expect(Math.acos(-2)).toBe(NaN);
 			});
@@ -92,7 +92,7 @@ describe("Math Object", () => {
 		});
 
 		// Hiperbolic arccosine
-		describe("acosh()", () => {
+		describe("acosh(n)", () => {
 			test("arg: -1", () => {
 				expect(Math.acosh(-1)).toBe(NaN);
 			});
@@ -108,7 +108,7 @@ describe("Math Object", () => {
 		});
 
 		// Arcsine (in radians)
-		describe("asin()", () => {
+		describe("asin(n)", () => {
 			test("arg: -2", () => {
 				expect(Math.asin(-2)).toBe(NaN);
 			});
@@ -128,7 +128,7 @@ describe("Math Object", () => {
 
 
 		// Hiperbolic arcsine
-		describe("asinh()", () => {
+		describe("asinh(n)", () => {
 			test("arg: 1", () => {
 				expect(Math.asinh(1)).toBe(0.881373587019543);
 			});
@@ -144,7 +144,7 @@ describe("Math Object", () => {
 		});
 
 		// Arctangent (radians)
-		describe("atan()", () => {
+		describe("atan(n)", () => {
 			test("arg: 1", () => {
 				expect(Math.atan(1)).toBe(0.7853981633974483);
 			});
@@ -169,20 +169,20 @@ describe("Math Object", () => {
 		});
 
 		// Returns the angle of a point
-		describe("atan2()", () => {
-			test("arg: 90,15", () => {
+		describe("atan2(x, y)", () => {
+			test("args: 90,15", () => {
 				expect(Math.atan2(90, 15)).toBe(1.4056476493802699);
 			});
-			test("arg: 15, 90", () => {
+			test("args: 15, 90", () => {
 				expect(Math.atan2(15, 90)).toBe(0.16514867741462683);
 			});
-			test("arg: 10, 10", () => {
+			test("args: 10, 10", () => {
 				expect(Math.atan2(10, 10)).toBe(0.7853981633974483);
 			});
 		});
 
 		// Floor of a floating number
-		describe("floor()", () => {
+		describe("floor(n)", () => {
 			test("arg: 1.2", () => {
 				expect(Math.floor(1.2)).toBe(1);
 			});
@@ -195,7 +195,7 @@ describe("Math Object", () => {
 		});
 
 		// Returns the nearest 32-bit single precision float representation of a Number
-		describe("fround()", () => {
+		describe("fround(n)", () => {
 			test("arg: 5.5", () => {
 				expect(Math.fround(5.5)).toBe(5.5);
 			});
@@ -208,7 +208,7 @@ describe("Math Object", () => {
 		});
 
 		// Returns the square root of the sum of the squares of the arguments
-		describe("hypot()", () => {
+		describe("hypot(a, b)", () => {
 			test("args: 3, 4", () => {
 				expect(Math.hypot(3, 4)).toBe(5);
 			});
@@ -232,8 +232,22 @@ describe("Math Object", () => {
 				expect(Math.imul(0xffffffff, 5)).toBe(-5);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the natural logarithm of a number
+		describe("log(n)", () => {
+			test("arg: -1", () => {
+				expect(Math.log(-1)).toBe(NaN);
+			});
+			test("arg: 0", () => {
+				expect(Math.log(0)).toBe(-Infinity);
+			});
+			test("arg: 1", () => {
+				expect(Math.log(1)).toBe(0);
+			});
+			test("arg: 10)", () => {
+				expect(Math.log(10)).toBe(2.302585092994046);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
