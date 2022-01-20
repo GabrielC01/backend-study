@@ -237,6 +237,28 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Returns the smallest integer greater than or equal to the given number
+		describe("ceil(n)", () => {
+			test("arg: 0.95", () => {
+				expect(Math.ceil(.95)).toBe(1);
+			});
+			test("arg: 4", () => {
+				expect(Math.ceil(4)).toBe(4);
+			});
+			test("arg: 7.004", () => {
+				expect(Math.ceil(7.004)).toBe(8);
+			});
+			test("arg: -0.95", () => {
+				expect(Math.ceil(-.95)).toBe(-0);
+			});
+			test("arg: -4", () => {
+				expect(Math.ceil(-4)).toBe(-4);
+			});
+			test("arg: -7.004", () => {
+				expect(Math.ceil(-7.004)).toBe(-7);
+			});
+		});
+
 		// Floor of a floating number
 		describe("floor(n)", () => {
 			test("arg: 1.2", () => {
