@@ -320,6 +320,22 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Returns e^x - 1
+		describe("expm1(n)", () => {
+			test("arg: 0", () => {
+				expect(Math.expm1(0)).toBe(0);
+			});
+			test("arg: 1", () => {
+				expect(Math.expm1(1)).toBe(1.718281828459045);
+			});
+			test("arg: -1", () => {
+				expect(Math.expm1(-1)).toBe(-0.6321205588285577);
+			});
+			test("arg: 2", () => {
+				expect(Math.expm1(2)).toBe(6.38905609893065);
+			});
+		});
+
 		// Floor of a floating number
 		describe("floor(n)", () => {
 			test("arg: 1.2", () => {
