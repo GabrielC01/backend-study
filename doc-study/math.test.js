@@ -435,8 +435,22 @@ describe("Math Object", () => {
 				expect(Math.log1p(-2)).toBe(NaN);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the base 2 logarithm of the given number
+		describe("log2()", () => {
+			test("arg: 3", () => {
+				expect(Math.log2(3)).toBe(1.584962500721156);
+			});
+			test("arg: 2", () => {
+				expect(Math.log2(2)).toBe(1);
+			});
+			test("arg: 1", () => {
+				expect(Math.log2(1)).toBe(0);
+			});
+			test("arg: 128", () => {
+				expect(Math.log2(128)).toBe(7);
+			});
+		});
 //		describe("", () => {
 //		});
 	});
