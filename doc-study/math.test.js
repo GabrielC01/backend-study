@@ -259,6 +259,22 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Returns the number of leading zero bits in the 32 bit representation of the given number
+		describe("clz32(n)", () => {
+			test("arg: 1", () => {
+				// 1
+				expect(Math.clz32(1)).toBe(31);
+			});
+			test("arg: 4", () => {
+				// 100
+				expect(Math.clz32(4)).toBe(29);
+			});
+			test("arg: 7", () => {
+				// 111
+				expect(Math.clz32(7)).toBe(29);
+			});
+		});
+
 		// Returns the result of e constant raised to the power of the given number
 		describe("exp(n)", () => {
 			test("arg: -1", () => {
