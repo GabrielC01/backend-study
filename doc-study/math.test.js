@@ -203,6 +203,40 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Returns the cubic root of a number
+		describe("cbrt(n)", () => {
+			test("arg: NaN", () => {
+				expect(Math.cbrt(NaN)).toBe(NaN);
+			});
+			test("arg: -1", () => {
+				expect(Math.cbrt(-1)).toBe(-1);
+			});
+			test("arg: -0", () => {
+				expect(Math.cbrt(-0)).toBe(-0);
+			});
+			test("arg: -Infinity", () => {
+				expect(Math.cbrt(-Infinity)).toBe(-Infinity);
+			});
+			test("arg: 0", () => {
+				expect(Math.cbrt(0)).toBe(0);
+			});
+			test("arg: 1", () => {
+				expect(Math.cbrt(1)).toBe(1);
+			});
+			test("arg: Infinity", () => {
+				expect(Math.cbrt(Infinity)).toBe(Infinity);
+			});
+			test("arg: null", () => {
+				expect(Math.cbrt(null)).toBe(0);
+			});
+			test("arg: 2", () => {
+				expect(Math.cbrt(2)).toBe(1.2599210498948732);
+			});
+			test("arg: 9", () => {
+				expect(Math.cbrt(27)).toBe(3);
+			});
+		});
+
 		// Floor of a floating number
 		describe("floor(n)", () => {
 			test("arg: 1.2", () => {
