@@ -291,6 +291,22 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Returns the hyperbolic cosine of a number
+		describe("cosh(n)", () => {
+			test("arg: 0", () => {
+				expect(Math.cosh(0)).toBe(1);
+			});
+			test("arg: 1", () => {
+				expect(Math.cosh(1)).toBe(1.5430806348152437);
+			});
+			test("arg: -1", () => {
+				expect(Math.cosh(-1)).toBe(1.5430806348152437);
+			});
+			test("arg: 2", () => {
+				expect(Math.cosh(2)).toBe(3.7621956910836314);
+			});
+		});
+
 		// Returns the result of e constant raised to the power of the given number
 		describe("exp(n)", () => {
 			test("arg: -1", () => {
