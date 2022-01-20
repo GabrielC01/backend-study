@@ -181,6 +181,28 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Returns the hyperbolic arctagent of a number
+		describe("atanh(n)", () => {
+			test("arg: -2", () => {
+				expect(Math.atanh(-2)).toBe(NaN);
+			});
+			test("arg: -1", () => {
+				expect(Math.atanh(-1)).toBe(-Infinity);
+			});
+			test("arg: 0", () => {
+				expect(Math.atanh(0)).toBe(0);
+			});
+			test("arg: 0.5", () => {
+				expect(Math.atanh(0.5)).toBe(0.5493061443340548);
+			});
+			test("arg: 1", () => {
+				expect(Math.atanh(1)).toBe(Infinity);
+			});
+			test("arg: 2", () => {
+				expect(Math.atanh(2)).toBe(NaN);
+			});
+		});
+
 		// Floor of a floating number
 		describe("floor(n)", () => {
 			test("arg: 1.2", () => {
