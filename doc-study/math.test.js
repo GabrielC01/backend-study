@@ -248,6 +248,24 @@ describe("Math Object", () => {
 				expect(Math.log(10)).toBe(2.302585092994046);
 			});
 		});
+
+		// Returns the base 10 logarithm of a number
+		describe("log10(n)", () => {
+			test("arg: 2", () => {
+				expect(Math.log10(2)).toBe(0.3010299956639812);
+			});
+			test("arg: 1", () => {
+				expect(Math.log10(1)).toBe(0);
+			});
+			test("arg: -2", () => {
+				expect(Math.log10(-2)).toBe(NaN);
+			});
+			test("arg: 100000", () => {
+				expect(Math.log10(100000)).toBe(5);
+			});
+		});
+//		describe("", () => {
+//		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
