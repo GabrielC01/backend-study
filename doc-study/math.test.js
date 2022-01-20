@@ -259,6 +259,19 @@ describe("Math Object", () => {
 			});
 		});
 
+		// Returns the result of e constant raised to the power of the given number
+		describe("exp(n)", () => {
+			test("arg: -1", () => {
+				expect(Math.exp(-1)).toBe(0.36787944117144233);
+			});
+			test("arg: 0", () => {
+				expect(Math.exp(0)).toBe(1);
+			});
+			test("arg: 1", () => {
+				expect(Math.exp(1)).toBe(2.718281828459045);
+			});
+		});
+
 		// Floor of a floating number
 		describe("floor(n)", () => {
 			test("arg: 1.2", () => {
