@@ -320,7 +320,7 @@ describe("Math Object", () => {
 			});
 		});
 
-		// Returns e^x - 1
+		// Returns e^n - 1
 		describe("expm1(n)", () => {
 			test("arg: 0", () => {
 				expect(Math.expm1(0)).toBe(0);
@@ -419,8 +419,22 @@ describe("Math Object", () => {
 				expect(Math.log10(100000)).toBe(5);
 			});
 		});
-//		describe("", () => {
-//		});
+		
+		// Returns the natural logarithm of the given number plus 1
+		describe("log1p(n)", () => {
+			test("arg: 1", () => {
+				expect(Math.log1p(1)).toBe(0.6931471805599453);
+			});
+			test("arg: 0", () => {
+				expect(Math.log1p(0)).toBe(0);
+			});
+			test("arg: -1", () => {
+				expect(Math.log1p(-1)).toBe(-Infinity);
+			});
+			test("arg: 2", () => {
+				expect(Math.log1p(-2)).toBe(NaN);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
