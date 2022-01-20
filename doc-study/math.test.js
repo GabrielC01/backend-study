@@ -468,6 +468,22 @@ describe("Math Object", () => {
 				expect(Math.max(...array)).toBe(8);
 			});
 		});
+
+		// Returns the smallest passed number
+		describe("min(...)", () => {
+			test("arg: 1, 2, 3", () => {
+				expect(Math.min(1, 2, 3)).toBe(1);
+			});
+			test("arg: 10 15 30", () => {
+				expect(Math.min(15, 10, 30)).toBe(10);
+			});
+			test("arg: [1, 2, 0, 5, 7, 9, 3]", () => {
+				expect(Math.min(...[1, 2, 0, 5, 7, 9, 3])).toBe(0);
+			});
+			test("arg: [10, 4, 1]", () => {
+				expect(Math.min(...[10, 4, 1])).toBe(1);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
