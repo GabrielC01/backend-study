@@ -457,10 +457,10 @@ describe("Math Object", () => {
 			test("arg: [1, 2, 3]", () => {
 				expect(Math.max(...[1, 2, 3])).toBe(3);
 			});
-			test("arg: 5, 15, 30", () => {
+			test("args: 5, 15, 30", () => {
 				expect(Math.max(5, 15, 30)).toBe(30);
 			});
-			test("arg: 40, 70, 20", () => {
+			test("args: 40, 70, 20", () => {
 				expect(Math.max(40, 70, 20)).toBe(70);
 			});
 			test("arg: [1, 3, 7, 8]", () => {
@@ -471,10 +471,10 @@ describe("Math Object", () => {
 
 		// Returns the smallest passed number
 		describe("min(...)", () => {
-			test("arg: 1, 2, 3", () => {
+			test("args: 1, 2, 3", () => {
 				expect(Math.min(1, 2, 3)).toBe(1);
 			});
-			test("arg: 10 15 30", () => {
+			test("args: 10 15 30", () => {
 				expect(Math.min(15, 10, 30)).toBe(10);
 			});
 			test("arg: [1, 2, 0, 5, 7, 9, 3]", () => {
@@ -484,6 +484,27 @@ describe("Math Object", () => {
 				expect(Math.min(...[10, 4, 1])).toBe(1);
 			});
 		});
+
+		// Retuns the given base to the power of the given exponent
+		describe("pow(a, b)", () => {
+			test("args: 2, 2", () => {
+				expect(Math.pow(2, 2)).toBe(4);
+			});
+			test("args: 3, 2", () => {
+				expect(Math.pow(3, 2)).toBe(9);
+			});
+			test("args: 2, 7", () => {
+				expect(Math.pow(2, 7)).toBe(128);
+			});
+		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
