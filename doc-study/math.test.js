@@ -598,7 +598,18 @@ describe("Math Object", () => {
 				expect(Math.tanh(90)).toBe(1);
 			});
 		});
-//		describe("", () => {
-//		});
+		
+		// Returns the integer part of the given number
+		describe("trunc(n)", () => {
+			test("arg: 1.2", () => {
+				expect(Math.trunc(1.2)).toBe(1);
+			});
+			test("arg: 3.4", () => {
+				expect(Math.trunc(3.4)).toBe(3);
+			});
+			test("arg: 7", () => {
+				expect(Math.trunc(7)).toBe(7);
+			});
+		});
 	});
 });
