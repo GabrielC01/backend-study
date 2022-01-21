@@ -497,8 +497,13 @@ describe("Math Object", () => {
 				expect(Math.pow(2, 7)).toBe(128);
 			});
 		});
-//		describe("", () => {
-//		});
+		
+		// Returns a pseudo-random floating-point number in the range 0 to less than 1
+		describe("random()", () => {
+			test("Test condition", () => {
+				expect(Math.random()).toBeTruthy();
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
