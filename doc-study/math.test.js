@@ -517,8 +517,19 @@ describe("Math Object", () => {
 				expect(Math.round(3.5)).toBe(4);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns either a positive or negative 1 indicating the sign of the given number
+		describe("sign(n)", () => {
+			test("arg: 3", () => {
+				expect(Math.sign(3)).toBe(1);
+			});
+			test("arg: -3", () => {
+				expect(Math.sign(-3)).toBe(-1);
+			});
+			test("arg: 0", () => {
+				expect(Math.sign(0)).toBe(0);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
