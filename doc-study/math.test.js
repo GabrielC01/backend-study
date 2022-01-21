@@ -530,8 +530,19 @@ describe("Math Object", () => {
 				expect(Math.sign(0)).toBe(0);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the sine of the given number (in radians)
+		describe("sin(n)", () => {
+			test("arg: 0", () => {
+				expect(Math.sin(0)).toBe(0);
+			});
+			test("arg: 1", () => {
+				expect(Math.sin(1)).toBe(0.8414709848078965);
+			});
+			test("arg: Math.PI / 2", () => {
+				expect(Math.sin(Math.PI / 2)).toBe(1);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
