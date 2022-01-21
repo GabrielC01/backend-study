@@ -543,8 +543,22 @@ describe("Math Object", () => {
 				expect(Math.sin(Math.PI / 2)).toBe(1);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the hyperbolic sine of the given number
+		describe("sinh()", () => {
+			test("arg: 0", () => {
+				expect(Math.sinh(0)).toBe(0);
+			});
+			test("arg: 1", () => {
+				expect(Math.sinh(1)).toBe(1.1752011936438014);
+			});
+			test("arg: -1", () => {
+				expect(Math.sinh(-1)).toBe(-1.1752011936438014);
+			});
+			test("arg: 2", () => {
+				expect(Math.sinh(2)).toBe(3.626860407847019);
+			});
+		});
 //		describe("", () => {
 //		});
 	});
