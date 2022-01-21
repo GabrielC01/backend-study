@@ -545,7 +545,7 @@ describe("Math Object", () => {
 		});
 
 		// Returns the hyperbolic sine of the given number
-		describe("sinh()", () => {
+		describe("sinh(n)", () => {
 			test("arg: 0", () => {
 				expect(Math.sinh(0)).toBe(0);
 			});
@@ -559,6 +559,23 @@ describe("Math Object", () => {
 				expect(Math.sinh(2)).toBe(3.626860407847019);
 			});
 		});
+
+		// Returns the square root of the given number
+		describe("sqrt(n)", () => {
+			test("arg: 4", () => {
+				expect(Math.sqrt(4)).toBe(2);
+			});
+			test("arg: 9", () => {
+				expect(Math.sqrt(9)).toBe(3);
+			});
+			test("arg: 144", () => {
+				expect(Math.sqrt(144)).toBe(12);
+			});
+		});
+//		describe("", () => {
+//		});
+//		describe("", () => {
+//		});
 //		describe("", () => {
 //		});
 	});
