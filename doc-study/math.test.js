@@ -572,8 +572,19 @@ describe("Math Object", () => {
 				expect(Math.sqrt(144)).toBe(12);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the tangent of the given number
+		describe("tan(n)", () => {
+			test("arg: 0", () => {
+				expect(Math.tan(0)).toBe(0);
+			});
+			test("arg: 1", () => {
+				expect(Math.tan(1)).toBe(1.5574077246549023);
+			});
+			test("arg: 90", () => {
+				expect(Math.tan(90)).toBe(-1.995200412208242);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
