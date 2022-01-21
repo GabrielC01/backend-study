@@ -585,8 +585,19 @@ describe("Math Object", () => {
 				expect(Math.tan(90)).toBe(-1.995200412208242);
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the given hyperbolic tangent of the given number
+		describe("tanh(n)", () => {
+			test("arg: -1", () => {
+				expect(Math.tanh(-1)).toBe(-0.7615941559557649);
+			});
+			test("arg: 0", () => {
+				expect(Math.tanh(0)).toBe(0);
+			});
+			test("arg: 90", () => {
+				expect(Math.tanh(90)).toBe(1);
+			});
+		});
 //		describe("", () => {
 //		});
 	});
