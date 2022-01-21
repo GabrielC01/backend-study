@@ -504,8 +504,19 @@ describe("Math Object", () => {
 				expect(Math.random()).toBeTruthy();
 			});
 		});
-//		describe("", () => {
-//		});
+
+		// Returns the value of a number rounded to the nearest integer
+		describe("round(n)", () => {
+			test("arg: 0.9", () => {
+				expect(Math.round(0.9)).toBe(1);
+			});
+			test("arg: 1.2", () => {
+				expect(Math.round(1.2)).toBe(1);
+			});
+			test("arg: 3.5", () => {
+				expect(Math.round(3.5)).toBe(4);
+			});
+		});
 //		describe("", () => {
 //		});
 //		describe("", () => {
