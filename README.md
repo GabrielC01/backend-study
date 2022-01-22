@@ -1,10 +1,11 @@
-# Back-end Study Repository
+#Back-end Study Repository
 
 <div style="text-align: justify">
 	This repository should store my back-end study content.
 It is linked to my backend-study-plan project, which contains
 my back-end study plan, in the form of Kanban.<br>
 Study plan: https://github.com/users/GabrielC01/projects/1
+I also follow this backend roadmap: https://roadmap.sh/backend
 </div>
 
 ## JavaScript
