@@ -38,3 +38,28 @@ test('Return the number of days in a month', () => {
 	expect(getDaysInMonth(9, 2012)).toBe(30);
 	expect(getDaysInMonth(12, 2012)).toBe(31);
 });
+
+test('Return the month name of a particular date', () => {
+	function month_name(date) {
+		let dates = {
+			January: 0,
+			February: 1,
+			March: 2,
+			April: 3,
+			May: 4,
+			June: 5,
+			July: 6,
+			August: 7,
+			September: 8,
+			October: 9,
+			November: 10,
+			December: 11
+		};
+		for (let prop in dates) {
+			if (date.getMonth() == dates[prop])
+				return prop;
+		}
+	}
+	expect(month_name(new Date("10/11/2009"))).toBe('October');
+	expect(month_name(new Date("11/13/2014"))).toBe('November');
+});
