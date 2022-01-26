@@ -63,3 +63,17 @@ test('Return the month name of a particular date', () => {
 	expect(month_name(new Date("10/11/2009"))).toBe('October');
 	expect(month_name(new Date("11/13/2014"))).toBe('November');
 });
+
+test('Compare dates', () => {
+	function compare_dates(date1, date2) {
+		date1 = Date.parse(date1);
+		date2 = Date.parse(date2);
+		if (date1 == date2) return "Date1 = Date2";
+		if (date1 > date2) return "Date1 > Date2";
+		if (date1 < date2) return "Date2 > Date1";
+	}
+
+	expect(compare_dates(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:00'))).toBe("Date1 = Date2");
+	expect(compare_dates(new Date('11/14/2013 00:01'), new Date('11/14/2013 00:00'))).toBe("Date1 > Date2");
+	expect(compare_dates(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:01'))).toBe("Date2 > Date1");
+});
