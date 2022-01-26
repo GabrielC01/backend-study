@@ -85,3 +85,14 @@ test('Add specified minutes to a date object', () => {
 	}
 	expect(add_minutes(new Date(2014,10,2), 30).getMinutes()).toBe(30);
 });
+
+test('Test wheter a date is a weekend', () => {
+	function is_weekend(date) {
+		date = new Date(date);
+		return date.getDay() > 4 || date.getDay() == 0 ? 'weekend' : undefined;
+	}
+
+	expect(is_weekend('Nov 15, 2014')).toBe('weekend');
+	expect(is_weekend('Nov 16, 2014')).toBe('weekend');
+	expect(is_weekend('Nov 17, 2014')).toBe(undefined);
+});
