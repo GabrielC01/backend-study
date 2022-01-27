@@ -117,3 +117,14 @@ test('Get the last day of a month', () => {
 	expect(lastday(2014,1)).toBe(28);
 	expect(lastday(2014,11)).toBe(31);
 });
+
+test('Calculate yesterday day', () => {
+	function yesterday(date) {
+		date = new Date(date);
+		date.setDate(date.getDate() - 1);
+		return date;
+	}
+	expect(yesterday('Nov 15, 2014').getDate()).toBe(14);
+	expect(yesterday('Nov 16, 2015').getDate()).toBe(15);
+	expect(yesterday('Nov 17, 2016').getDate()).toBe(16);
+});
