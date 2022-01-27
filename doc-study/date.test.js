@@ -106,3 +106,14 @@ test('Get the difference between two dates in days', () => {
 	expect(date_diff_indays('04/02/2014', '11/04/2014')).toBe(216);
 	expect(date_diff_indays('12/02/2014', '11/04/2014')).toBe(-28);
 });
+
+test('Get the last day of a month', () => {
+	function lastday(year, month) {
+		if (month == 1) return year % 4 == 0 ? 29 : 28;
+		else if ([0, 2, 4, 6, 7, 9, 11].indexOf(month) > -1) return 31;
+		else return 30;
+	}
+	expect(lastday(2014,0)).toBe(31);
+	expect(lastday(2014,1)).toBe(28);
+	expect(lastday(2014,11)).toBe(31);
+});
