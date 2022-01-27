@@ -96,3 +96,13 @@ test('Test wheter a date is a weekend', () => {
 	expect(is_weekend('Nov 16, 2014')).toBe('weekend');
 	expect(is_weekend('Nov 17, 2014')).toBe(undefined);
 });
+
+test('Get the difference between two dates in days', () => {
+	function date_diff_indays(date1, date2) {
+		date1 = Date.parse(date1);
+		date2 = Date.parse(date2);
+		return ((((date2 - date1) / 1000) / 60) / 60) / 24;
+	}
+	expect(date_diff_indays('04/02/2014', '11/04/2014')).toBe(216);
+	expect(date_diff_indays('12/02/2014', '11/04/2014')).toBe(-28);
+});
