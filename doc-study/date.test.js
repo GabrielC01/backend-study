@@ -162,3 +162,12 @@ test('Return the number of minutes in hours and minutes', () => {
 	}
 	expect(timeConvert(200))
 });
+
+test('Get the amount of days of a year', () => {
+	function days_of_a_year(year) {
+		let ms = Date.parse(year);
+		return ((((ms) / 1000) / 60) / 60) / 24;
+	}
+	expect(days_of_a_year(2015));
+	expect(days_of_a_year(2016));
+});
