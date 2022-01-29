@@ -171,3 +171,16 @@ test('Get the amount of days of a year', () => {
 	expect(days_of_a_year(2015));
 	expect(days_of_a_year(2016));
 });
+
+test('Get the quarter of a year', () => {
+	function quarter_of_the_year(date) {
+		let month = date.getMonth();
+		if (month < 3)
+			return 1;
+		else if (month < 6 && month >= 3) return 2;
+		else if (month < 9 && month >= 6) return 3;
+		else if (month < 12 && month >= 9) return 4;
+	}
+	expect(quarter_of_the_year(new Date(2015, 1, 21))).toBe(1);
+	expect(quarter_of_the_year(new Date(2015, 10, 18))).toBe(4);
+});
