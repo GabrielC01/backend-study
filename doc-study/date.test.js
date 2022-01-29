@@ -140,3 +140,15 @@ test('Get the maximum date of an array of dates', () => {
 	}
 	expect(max_date(['2015/02/01', '2015/02/02', '2015/01/03'])).toBe("2015/02/02");
 });
+
+test('Get the minimum date of an array of dates', () => {
+	function min_date(dates) {
+		for (let i = 0; i < dates.length; i++) {
+			dates[i] = new Date(dates[i]);
+			dates[i] = Date.parse(dates[i]);
+		}
+		let min = new Date(Math.min(...dates));
+		return min.getFullYear() + '/' + datePad((min.getMonth()+1)) + '/' + datePad(min.getDate());
+	}
+	expect(min_date(['2015/02/01', '2015/02/02', '2015/01/03'])).toBe("2015/01/03");
+});
