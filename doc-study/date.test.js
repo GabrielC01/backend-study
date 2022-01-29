@@ -152,3 +152,13 @@ test('Get the minimum date of an array of dates', () => {
 	}
 	expect(min_date(['2015/02/01', '2015/02/02', '2015/01/03'])).toBe("2015/01/03");
 });
+
+test('Return the number of minutes in hours and minutes', () => {
+	function timeConvert(time) {
+		time = Date.parse(time);
+		let minutes = (time / 1000) / 60;
+		let hours = minutes / 60;
+		return hours + ' hour(s) and ' + minutes + ' minute(s)';
+	}
+	expect(timeConvert(200))
+});
