@@ -128,3 +128,15 @@ test('Calculate yesterday day', () => {
 	expect(yesterday('Nov 16, 2015').getDate()).toBe(15);
 	expect(yesterday('Nov 17, 2016').getDate()).toBe(16);
 });
+
+test('Get the maximum date of an array of dates', () => {
+	function max_date(dates) {
+		for (let i = 0; i < dates.length; i++) {
+			dates[i] = new Date(dates[i]);
+			dates[i] = Date.parse(dates[i]);
+		}
+		let max = new Date(Math.max(...dates));
+		return max.getFullYear() + '/' + datePad((max.getMonth()+1)) + '/' + datePad(max.getDate());
+	}
+	expect(max_date(['2015/02/01', '2015/02/02', '2015/01/03'])).toBe("2015/02/02");
+});
