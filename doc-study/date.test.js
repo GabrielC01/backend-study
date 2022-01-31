@@ -184,3 +184,15 @@ test('Get the quarter of a year', () => {
 	expect(quarter_of_the_year(new Date(2015, 1, 21))).toBe(1);
 	expect(quarter_of_the_year(new Date(2015, 10, 18))).toBe(4);
 });
+
+test('Count the number of days passed since the beginning of the year', () => {
+	function days_passed(date) {
+		let beginningOfTheYear = Date.parse(new Date(date.getFullYear(), 0));
+		let passedDays = Date.parse(date);
+		beginningOfTheYear = ((((beginningOfTheYear) / 1000) / 60) / 60) / 24;
+		passedDays = ((((passedDays) / 1000) / 60) / 60) / 24;
+		return passedDays - beginningOfTheYear + 1;
+	}
+	expect(days_passed(new Date(2015, 0, 15))).toBe(15);
+	expect(days_passed(new Date(2015, 11, 14))).toBe(348);
+});
