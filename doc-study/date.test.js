@@ -196,3 +196,13 @@ test('Count the number of days passed since the beginning of the year', () => {
 	expect(days_passed(new Date(2015, 0, 15))).toBe(15);
 	expect(days_passed(new Date(2015, 11, 14))).toBe(348);
 });
+
+test('Calculate age', () => {
+	function calculate_age(date) {
+		date = new Date(Date.parse(date)).getFullYear();
+		let currDate = new Date(Date.now()).getFullYear();
+		return currDate - date;
+	}
+	expect(calculate_age(new Date(1982, 11, 4))).toBe(32);
+	expect(calculate_age(new Date(1962, 1, 1))).toBe(53);
+});
