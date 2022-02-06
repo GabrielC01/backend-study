@@ -214,10 +214,18 @@ test('Get the day of the month', () => {
   expect(day_of_the_month(new Date(2015, 10, 1))).toBe('01');
 });
 
-test('Short days', () => {
+test('Short day name', () => {
   function short_Days(date) {
-    let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     return days[date.getDay()];
   }
   expect(short_Days(new Date(2015, 10, 1))).toBe('Sun');
 });
+
+test('Long day name', () => {
+  function long_Days(date) {
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    return days[date.getDay()];
+  }
+  expect(long_Days(new Date(2015, 10, 1))).toBe('Sunday');
+})
