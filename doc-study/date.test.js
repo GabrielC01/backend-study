@@ -203,6 +203,13 @@ test('Calculate age', () => {
 		let currDate = new Date(Date.now()).getFullYear();
 		return currDate - date;
 	}
-	expect(calculate_age(new Date(1982, 11, 4))).toBe(32);
-	expect(calculate_age(new Date(1962, 1, 1))).toBe(53);
+	expect(calculate_age(new Date(1982, 11, 4))).toBe(40);
+	expect(calculate_age(new Date(1962, 1, 1))).toBe(60);
+});
+
+test('Get the day of the month', () => {
+  function day_of_the_month(date) {
+    return datePad(date.getDate());
+  }
+  expect(day_of_the_month(new Date(2015, 10, 1))).toBe('01');
 });
