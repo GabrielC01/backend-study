@@ -292,3 +292,12 @@ test('Get numeric representation of a month', () => {
   }
   expect(numeric_month(new Date(2015, 10, 1)));
 });
+
+test('Get short textual representation of a month', () => {
+  function short_months(date) {
+    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return months[date.getMonth()];
+  }
+  expect(short_months(new Date(2015, 10, 1))).toBe('Nov');
+})
