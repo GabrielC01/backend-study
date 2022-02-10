@@ -284,4 +284,11 @@ test('Get full textual representation of a month', () => {
     return months[date.getMonth()-1];
   }
   expect(full_month(new Date(2015, 10, 1))).toBe('November');
-})
+});
+
+test('Get numeric representation of a month', () => {
+  function numeric_month(date) {
+    return datePad(date.getMonth() + 1);
+  }
+  expect(numeric_month(new Date(2015, 10, 1)));
+});
