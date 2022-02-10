@@ -253,4 +253,24 @@ test('Get English ordinal suffix for the day of the month', () => {
     }
   }
   expect(english_ordinal_suffix(new Date(2015, 10, 1)));
-})
+});
+
+test('ISO-8601 week number of year, weeks starting on Monday', () => {
+  function ISO_numeric_date(date) {
+    return date.getDay() == 0 ? 7 : date.getDay();
+  }
+  function ISO8601_week_no(date) {
+    let dayInMs = Date.parse('02 Jan 1970 00:00:00 GMT');
+    let currDateInMs = Date.parse(date);
+    // Stating from the beginning of the year, count weeks
+    let year = Date.parse(new Date(date.getFullYear(), 0));
+    let weekNumber = 0;
+    for (; year <= currDateInMs; year += dayInMs) {
+      if (new Date(year).getDay() == 0) {
+        weekNumber++; 
+      }
+    }
+    return weekNumber;
+  } 
+  expect(ISO8601_week_no(new Date(2015, 10, 1))).toBe(44);
+});
