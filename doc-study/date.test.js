@@ -316,3 +316,10 @@ test('Get a two digit representation of a year', () => {
   }
   expect(short_year(new Date(1989, 10, 1))).toBe('89');
 });
+
+test('Get lowercase Ante meridiem and Post meridiem', () => {
+  function lowercasePmAm(date) {
+    return date.getHours() < 12 ? date.getHours() + 'am' : (date.getHours() - 12) + 'pm';
+  }
+  expect(lowercasePmAm(new Date('Wed Feb 09 2022 23:20:19 GMT-0300'))).toBe('11pm');
+});
