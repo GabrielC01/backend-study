@@ -236,3 +236,21 @@ test('Get ISO-8601 numeric representation of the day of the week', () => {
   }
   expect(ISO_numeric_date(new Date(2015, 10, 1))).toBe(7);
 });
+
+test('Get English ordinal suffix for the day of the month', () => {
+  function english_ordinal_suffix(date) {
+    let dayNumberString = date.getDate().toString();
+    let onesPlaceDigit = parseInt(dayNumberString[dayNumberString.length]);
+    switch (onesPlaceDigit) {
+      case 1:
+        return dayNumberString + 'st';
+      case 2:
+        return dayNumberString + 'nd';
+      case 3:
+        return dayNumberString + 'rd';
+      default:
+        return dayNumberString + 'th';
+    }
+  }
+  expect(english_ordinal_suffix(new Date(2015, 10, 1)));
+})
