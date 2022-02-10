@@ -229,3 +229,10 @@ test('Long day name', () => {
   }
   expect(long_Days(new Date(2015, 10, 1))).toBe('Sunday');
 })
+
+test('Get ISO-8601 numeric representation of the day of the week', () => {
+  function ISO_numeric_date(date) {
+    return date.getDay() == 0 ? 7 : date.getDay();
+  }
+  expect(ISO_numeric_date(new Date(2015, 10, 1))).toBe(7);
+});
