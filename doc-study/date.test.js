@@ -301,3 +301,10 @@ test('Get short textual representation of a month', () => {
   }
   expect(short_months(new Date(2015, 10, 1))).toBe('Nov');
 })
+
+test('Get full numeric representation of a year', () => {
+  function full_year(date) {
+    return date.getFullYear();
+  }
+  expect(full_year(new Date(2015, 10, 1))).toBe(2015);
+})
