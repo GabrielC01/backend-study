@@ -274,3 +274,14 @@ test('ISO-8601 week number of year, weeks starting on Monday', () => {
   } 
   expect(ISO8601_week_no(new Date(2015, 10, 1))).toBe(44);
 });
+
+test('Get full textual representation of a month', () => {
+  function full_month(date) {
+		let months = [
+			'April', 'January', 'February,	March', 'May', 'June',
+      'July',	'August',	'September', 'October',	'November',	'December'
+    ];
+    return months[date.getMonth()-1];
+  }
+  expect(full_month(new Date(2015, 10, 1))).toBe('November');
+})
