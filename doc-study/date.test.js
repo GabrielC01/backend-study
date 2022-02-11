@@ -372,7 +372,7 @@ test('Get seconds with leading zeros (00 through 59)', () => {
 
 test('Get timezone', () => {
   function timezone(date) {
-    return /(*)$/.exec(date.toString());
+    return /\(.*\)/.exec(date.toString())[0].slice(1, -1);
   }
   expect(timezone(new Date())).toBe('Horário Padrão de Brasília');
-})
+});
