@@ -368,4 +368,11 @@ test('Get seconds with leading zeros (00 through 59)', () => {
     return date.getSeconds() < 10 ? datePad(date.getSeconds()) : date.getSeconds();
   }
   expect(seconds_with_zeros(new Date(1989, 10, 1))).toBe('00');
+});
+
+test('Get timezone', () => {
+  function timezone(date) {
+    return /(*)$/.exec(date.toString());
+  }
+  expect(timezone(new Date())).toBe('Horário Padrão de Brasília');
 })
