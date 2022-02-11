@@ -340,3 +340,11 @@ test('Swatch Internet time (000 through 999)', () => {
   }
   expect(internet_time(new Date(1989, 10, 1))).toBe(208);
 });
+
+test('Get 12-hour format of an hour with leading zeros', () => {
+  function hours_with_zeroes(date) {
+    if (date.getHours() == 0) return '12';
+    return date.getHours() <= 12 ? datePad(date.getHours()) : datePad(date.getHours() - 12);
+  }
+  expect(hours_with_zeroes(new Date(1989, 10, 1))).toBe('12');
+});
