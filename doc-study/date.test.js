@@ -323,3 +323,10 @@ test('Get lowercase Ante meridiem and Post meridiem', () => {
   }
   expect(lowercasePmAm(new Date('Wed Feb 09 2022 23:20:19 GMT-0300'))).toBe('11pm');
 });
+
+test('Get uppercase Ante meridiem and Post meridiem', () => {
+  function uppercasePmAm(date) {
+    return date.getHours() < 12 ? date.getHours() + 'AM' : (date.getHours() - 12) + 'PM'; 
+  }
+  expect(uppercasePmAm(new Date('Thu Feb 10 2022 22:02:51 GMT-0300'))).toBe('10PM');
+});
