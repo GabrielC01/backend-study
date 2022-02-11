@@ -330,3 +330,13 @@ test('Get uppercase Ante meridiem and Post meridiem', () => {
   }
   expect(uppercasePmAm(new Date('Thu Feb 10 2022 22:02:51 GMT-0300'))).toBe('10PM');
 });
+
+test('Swatch Internet time (000 through 999)', () => {
+  function internet_time(date) {
+    let hours = (date.getUTCHours() + 1) % 24;
+    let minutes = date.getUTCMinutes() / 60;
+    let seconds = date.getUTCSeconds() / 3600;
+    return Math.floor((hours + minutes + seconds) * 1000 / 24);
+  }
+  expect(internet_time(new Date(1989, 10, 1))).toBe(208);
+});
