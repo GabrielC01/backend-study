@@ -361,4 +361,11 @@ test('Get minutes with leading zeros (00 to 59)', () => {
     return date.getMinutes() < 10 ? datePad(date.getMinutes()) : date.getMinutes();
   }
   expect(minutes_with_zeros(new Date(1989, 10, 1))).toBe('00');
+});
+
+test('Get seconds with leading zeros (00 through 59)', () => {
+  function seconds_with_zeros(date) {
+    return date.getSeconds() < 10 ? datePad(date.getSeconds()) : date.getSeconds();
+  }
+  expect(seconds_with_zeros(new Date(1989, 10, 1))).toBe('00');
 })
