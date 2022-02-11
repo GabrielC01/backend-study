@@ -348,3 +348,10 @@ test('Get 12-hour format of an hour with leading zeros', () => {
   }
   expect(hours_with_zeroes(new Date(1989, 10, 1))).toBe('12');
 });
+
+test('Get 24-hour format of an hour without leading zeros', () => {
+  function hours_without_zeroes(date) {
+    return date.getHours();
+  }
+  expect(hours_without_zeroes(new Date(1989, 10, 1))).toBe(0);
+})
