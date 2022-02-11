@@ -354,4 +354,11 @@ test('Get 24-hour format of an hour without leading zeros', () => {
     return date.getHours();
   }
   expect(hours_without_zeroes(new Date(1989, 10, 1))).toBe(0);
+});
+
+test('Get minutes with leading zeros (00 to 59)', () => {
+  function minutes_with_zeros(date) {
+    return date.getMinutes() < 10 ? datePad(date.getMinutes()) : date.getMinutes();
+  }
+  expect(minutes_with_zeros(new Date(1989, 10, 1))).toBe('00');
 })
