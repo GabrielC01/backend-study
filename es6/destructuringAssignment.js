@@ -45,3 +45,7 @@ a = 8;
 b = 6;
 [a, b] = [b, a];
 console.log(a, b);
+
+[a, b, ...arr] = [1, 2, 3, 4, 5, 6, 7];
+console.log(a, b);
+console.log(arr);
