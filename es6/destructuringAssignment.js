@@ -49,3 +49,15 @@ console.log(a, b);
 [a, b, ...arr] = [1, 2, 3, 4, 5, 6, 7];
 console.log(a, b);
 console.log(arr);
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+const half = ({max, min}) => (max + min) / 2.0; 
+console.log(half(stats));
