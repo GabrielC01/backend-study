@@ -23,3 +23,15 @@ console.log(tomorrow);
 const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
 console.log(highToday);
 console.log(highTomorrow);
+
+const user = {
+  johnDoe: {
+    age: 34,
+    email: 'johndoe@freeCodeCamp.com'
+  }
+};
+
+const { johnDoe: { age, email }} = user;
+const { johnDoe: { age: userAge, email: userEmail }} = user;
+console.log(age);
+console.log(userAge);
