@@ -1,9 +1,16 @@
 <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
-  Make request
+  Make request(Text)
+</span>
+<br><br>
+<span id="ajaxButton1" style="cursor: pointer; text-decoration: underline">
+  Make request(XML)
 </span>
 <script type="text/javascript">
   var httpRequest;
+
   document.querySelector('#ajaxButton').onclick = () => { makeRequest('./test.html') };
+  document.queyrSelector('#ajaxButton1').onclick = () => { makeRequest('./test.xml') };
+
   function makeRequest(url) {
     // Browser compatibility handling
     if (window.XMLHttpRequest) {
@@ -35,7 +42,10 @@
     if (httpRequest.readyState === 4) {
       // Check http request status
       if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
+        //alert(httpRequest.responseText);
+        var xmldoc = httpRequest.responseXML;
+        var root_node = xmldoc.getElementByTagName('root').item(0);
+        alert(root_node.firstChild.data);
       } else {
         alert('There was a problem with the request.');
       }
