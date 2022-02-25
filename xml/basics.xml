@@ -1,0 +1,21 @@
+<!-- XML Declaration -->
+<!-- 	The XML declaration is case sensitive.
+			The XML declaration must bet the first thing to appear
+			in the document, if it appears in it.
+			HTTP protocol can override the value of encoding.-->			
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Tags -->
+<contact-info>
+	<name>Gabriel</name>
+	<e-mail>gabcchaves@zohomail.com</e-mail>
+	<!-- Tag with attribute -->
+	<portfolio href="https://gabcchaves.github.io"/>
+
+</contact-info>
+
+<!-- In the above snippet, the root element is <contact-info></contact-info> -->
+<!-- XML documents can only have one root element -->
+
+<!-- 	References
+&lt; &gt; &amp; &apos; &quot; -->
