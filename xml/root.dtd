@@ -1,0 +1,3 @@
+<!ELEMENT root (name, e-mail)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT e-mail (#PCDATA)>

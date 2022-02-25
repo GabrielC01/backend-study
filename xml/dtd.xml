@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+	<!ELEMENT root (name, e-mail)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT e-mail (#PCDATA)>
+]>
+
+<root>
+	<name>Gabriel Costa Chaves</name>
+	<e-mail>gabcchaves@zohomail.com</e-mail>
+</root>
