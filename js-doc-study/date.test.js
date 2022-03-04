@@ -389,5 +389,3 @@ test('Check whether or not the date is in daylights savings time', () => {
     }
   }
 })
-
-test('')
